@@ -11,3 +11,14 @@
 测试失败
 
 如果三个oem分支分别打hotfix补丁，用cherry_pick是可以的，测试通过
+
+
+# Git 使用技巧
+* clone远程库并设定本地文件夹名称 
+	''' 
+	git clone git@github.com:tianfengs/oemTest.git oemTestLocal  
+	'''
+* 一次性下载所有远程分支到本地  
+	'''
+	git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done  
+	'''
