@@ -14,18 +14,11 @@
 
 
 # Git 使用技巧
-<<<<<<< HEAD
 * clone远程库并设定本地文件夹名称 
-	''' 
-	git clone git@github.com:tianfengs/oemTest.git oemTestLocal  
-	'''
+''' 
+git clone git@github.com:tianfengs/oemTest.git oemTestLocal  
+'''
 * 一次性下载所有远程分支到本地  
-	'''
-	git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done  
-	'''
-=======
-* clone远程库并设定本地文件夹名称  
-	git clone git@github.com:tianfengs/oemTest.git oemTestLocal  
-* 一次性下载所有远程分支到本地  
-	git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done  
->>>>>>> f3b2215d635feb368dc19228a67d7ae1eb3f7159
+'''
+git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done  
+'''
